@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Scooby Doo</title>
+</head>
+<body>
+
+<canvas id="myCanvas"></canvas>
+<script type="text/javascript">
+  function doSomething() {
+	  document.getElementById("result1").value = "Like, the " + document.getElementById("inputOne").value;
+	  	  
+	  document.getElementById('myCanvas').getContext('2d').fillStype = "#AA9900";
+	  
+	  ctx.clearRect(0,0,canvas.width, canvas.height);
+	  var sources = {
+	  van : 'http://2.bp.blogspot.com/-euazKXrGMNs/T56zLMVzWKI/AAAAAAAAAV4/29hCX8d7Usw/s320/Mystery+machine+cartoon+version-ScoobyDoo.jpg'
+	  };
+	  
+	  var imageOne = new Image();
+	  imageOne.src = sources.van;
+	  imageOne.onload = function() { ctx.drawImage(imageOne, 0, 0, imageOne.width, imageOne.height); };
+
+  }
+
+  var canvas = document.getElementById('myCanvas');
+  var ctx = canvas.getContext('2d');
+  ctx.fillStyle='#FF0000';
+  ctx.fillRect(0,0,80,100);
+  
+</script>
+
+<h2>Where are you?</h2>
+<form id="myForm1">
+ <input type="text" id="inputOne">
+ <input type="button" value="Snack" onclick="doSomething()">
+ <input type="text" id="result1">
+</form>
+</body>
+</html>
